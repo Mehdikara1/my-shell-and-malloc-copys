@@ -13,4 +13,12 @@ setting the main file with the supposed things for malloc
 
 ---------------------problems to fix ------------------
 
--calling other functions in between may move the break up making calling my_alloc twice in a row may give uncontinous memory
+-calling other functions in between may move the break up making calling my_alloc twice in a row may give uncontinous memory    XXX
+
+-setting padding 
+
+
+--------------------fix history----------------------
+
+-Sat Oct 17 09:13:14 PM UTC 2026
+---made pointer converter
