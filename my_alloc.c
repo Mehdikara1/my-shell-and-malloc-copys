@@ -2,6 +2,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stddef.h>
+
+#define MAX (sizeof(max_align_t)-1)
 
 void *my_alloc(size_t size);
 
@@ -22,7 +25,7 @@ void *my_alloc(size_t size)
 {
     void *ptr = sbrk(size);
     uintptr_t pad = (uintptr_t)ptr;
-    pad = (pad+15) & ~15;
+    pad = (pad+MAX) & ~MAX;
     ptr = (void *)pad;
     return ptr;
 }
